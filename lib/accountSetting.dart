@@ -1,7 +1,6 @@
 import 'package:attendance/accountSettings.dart';
 import 'package:flutter/material.dart';
 
-
 class Accountsetting extends StatelessWidget {
   const Accountsetting({super.key});
 
