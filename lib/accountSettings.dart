@@ -1,4 +1,4 @@
-enum accountSetting {
+enum Accountsettings {
   kLanguage,
   kPassWord,
   kBusiness,
@@ -6,34 +6,34 @@ enum accountSetting {
   kKyb,
 }
 
-extension bExtants on accountSetting {
+extension bExtants on Accountsettings {
   String get title {
     return switch (this) {
-      accountSetting.kLanguage => 'Language ',
-      accountSetting.kPassWord => 'Security Password ',
-      accountSetting.kBusiness => 'Businesses ',
-      accountSetting.kAlarm => 'Alarm ',
-      accountSetting.kKyb => 'KYB ',
+      Accountsettings.kLanguage => 'Language ',
+      Accountsettings.kPassWord => 'Security Password ',
+      Accountsettings.kBusiness => 'Businesses ',
+      Accountsettings.kAlarm => 'Alarm ',
+      Accountsettings.kKyb => 'KYB ',
     };
   }
 
   String get description {
     return switch (this) {
-      accountSetting.kLanguage => 'English',
-      accountSetting.kPassWord => 'Edit Password',
-      accountSetting.kBusiness => '1 Active Businesses',
-      accountSetting.kAlarm => 'Alarm: 10:00 AM',
-      accountSetting.kKyb => 'Complete KYB to Avail online payment service...',
+      Accountsettings.kLanguage => 'English',
+      Accountsettings.kPassWord => 'Edit Password',
+      Accountsettings.kBusiness => '1 Active Businesses',
+      Accountsettings.kAlarm => 'Alarm: 10:00 AM',
+      Accountsettings.kKyb => 'Complete KYB to Avail online payment service...',
     };
   }
 
   bool get isNewFeature {
     return switch (this) {
-      accountSetting.kLanguage => false,
-      accountSetting.kPassWord => false,
-      accountSetting.kBusiness => false,
-      accountSetting.kAlarm => true,
-      accountSetting.kKyb => false,
+      Accountsettings.kLanguage => false,
+      Accountsettings.kPassWord => false,
+      Accountsettings.kBusiness => false,
+      Accountsettings.kAlarm => true,
+      Accountsettings.kKyb => false,
     };
   }
 }
